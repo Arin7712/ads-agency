@@ -1,6 +1,7 @@
 "use client"
 import Awards from "@/components/Awards";
 import BallCursor from "@/components/BallCursor";
+import Featured from "@/components/Featured";
 import Hero from "@/components/Hero";
 import Preloader from "@/components/Preloader";
 import Work from "@/components/Work";
@@ -24,6 +25,7 @@ export default function Home() {
       <Hero/>
       <Awards/>
       <Work/>
+      <Featured/>
     </div>
     </div>
     </div>
