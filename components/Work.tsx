@@ -9,7 +9,7 @@ const Work = () => {
     <div className="relative flex flex-col justify-between md:py-10 py-6 md:px-[6rem] px-6">
       {/* Top Content */}
       <div className="flex md:flex-row flex-col justify-between items-start md:gap-0 gap-6">
-        <div className="md:w-[46%] w-[85%] flex flex-col gap-6">
+        <div className="md:w-[46%] flex flex-col gap-6">
           <h2 className="md:text-4xl text-xl text-neutral-800 font-medium">
             BASIC/DEPT® is a global branding and digital design agency building
             products, services, and eCommerce experiences that turn cultural

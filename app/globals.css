@@ -133,23 +133,85 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-/* Stronger Grainy background */
-.grainy-background {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAFUlEQVR42u3BAQ0AAADCoPdPbQ43oAAAAAAAAACAb6kJXQAAAE6SURBVEhL7ZXBbtswDIZfDHT7/39aSxG1U4kYfGDp6UuZ+7AQM7vKxD8kmEyJkyZIly8afWj6fj3Z6uKna7+bm2mSRnI9m1c7t1G+xepuKq7Z4JrgVwDKbm2Nzv84xC2COgv4IslbWGLtVq7jPZlcfh2Dd5pJx7nBb0HE32cAUxWsAZuTSyf43DC1UEqixCchfX0rrVctgbOWZTsmF8V6cyzOrzXOv7uTZY5fKlYutkwULdLMI36vNTIsF7sa59xZ5xzyPVvV4qnXOeXsP1bd7l8d0mneVgQ71QgtuCuA6AkpmdbzkauuTcn/WDYOkNka0+ClfQTvqT6zrZ8geqgyYyBqtq7r7I6VJXlZVKQ1X9NirIhpncOYvpa2id2RL3awTiJ+7MXWu4EbOemg7M9VltO51iwVDUQU9BWv9r+G5YntqGy+ZwFb0WOV9zN6vqjPXIYZjWQUcM6S7lfUqg5PTF7Ac6dt2cXGeA+pTz9kV8Hoxpj+DmrBfKO4E6L8gXLDSxwJePKrFF4ZIXjjM1I7zO7mkx4B4r+n0FEdDIF0AAAAASUVORK5CYII=');
-  background-repeat: repeat;
-  background-size: 150px 150px; /* Slightly smaller grain size */
-  animation: grainAnimation 5s steps(10) infinite;
+body {
+  background-color: #202020;
+  height: 200vh;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Monument Extended';
+  margin: 0;
+  padding: 0;
+  
+  .grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-event: none;
+    z-index: 300;
+    transform: translateZ(0);
+    
+    &:before {
+      content: "";
+      top: -10rem;
+      left: -10rem;
+      width: calc(100% + 20rem);
+      height: calc(100% + 20rem);
+      z-index: 9999;
+      position: fixed;
+      background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+      opacity: 0.15;
+      pointer-events: none;
+      -webkit-animation: noise 1s steps(2) infinite;
+      animation: noise 1s steps(2) infinite;
+    }
+
+    @-webkit-keyframes noise {
+      to { transform: translate3d(-7rem,0,0) }
+    }
+
+    @keyframes noise {
+      0% { transform: translate3d(0,9rem,0) }
+      10% { transform: translate3d(-1rem,-4rem,0) }
+      20% { transform: translate3d(-8rem,2rem,0) }
+      30% { transform: translate3d(9rem,-9rem,0) }
+      40% { transform: translate3d(-2rem,7rem,0) }
+      50% { transform: translate3d(-9rem,-4rem,0) }
+      60% { transform: translate3d(2rem,6rem,0) }
+      70% { transform: translate3d(7rem,-8rem,0) }
+      80% { transform: translate3d(-9rem,1rem,0) }
+      90% { transform: translate3d(6rem,-5rem,0) }
+      to { transform: translate3d(-7rem,0,0) }
+    }
+  }
+  
+  .image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    background-image: url(https://images.unsplash.com/photo-1598382570113-48c8e44737b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3648&q=80);
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    opacity: 0.2;
+    z-index: -500;
+  }
+  @keyframes flicker {
+    0% { opacity: 0.2; }
+    5% { opacity: 0.25; }
+    10% { opacity: 0.15; }
+    15% { opacity: 0.3; }
+    20% { opacity: 0.2; }
+    100% { opacity: 0.2; }
+  }
+  
+  .image {
+    /* your existing styles... */
+    animation: flicker 2s infinite;
+  }
+  
 }
 
-@keyframes grainAnimation {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-3%, -3%); }
-  20% { transform: translate(-6%, 3%); }
-  30% { transform: translate(3%, -6%); }
-  40% { transform: translate(-3%, 9%); }
-  50% { transform: translate(-6%, 3%); }
-  60% { transform: translate(9%, 0%); }
-  70% { transform: translate(0%, 6%); }
-  80% { transform: translate(-9%, 0%); }
-  90% { transform: translate(6%, 3%); }
-}

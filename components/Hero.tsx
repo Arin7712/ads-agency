@@ -104,7 +104,7 @@ const Hero = () => {
       {/* Mobile View: Watch Reel Ball */}
       {isMobile && (
         <div className="flex justify-center items-center w-full h-screen z-50 pointer-events-none">
-          <div className="w-[120px] h-[120px] bg-white rounded-full flex justify-center items-center text-center absolute">
+          <div className="w-[90px] h-[90px] bg-white rounded-full flex justify-center items-center text-center absolute">
             <span className="text-black text-xs font-semibold uppercase">
               Watch
               <br />
@@ -113,7 +113,7 @@ const Hero = () => {
           </div>
 
           <div
-            className="absolute pt-[10rem] flex text-center transform mt-2 text-white text-xs"
+            className="absolute pt-[8rem] md:pt-[10rem] flex text-center transform mt-2 text-white text-xs"
             style={{
               whiteSpace: "nowrap",
             }}

@@ -38,7 +38,7 @@ const Navbar = () => {
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
-      } ${isScrolled ? "bg-white text-black shadow-md" : "bg-transparent text-white"} flex items-center justify-between md:py-10 py-6 md:px-[6rem] px-6`}
+      } ${isScrolled ? "bg-[#f1f1f1] text-black" : "bg-transparent text-white"} flex items-center justify-between md:py-10 py-6 md:px-[6rem] px-6`}
     >
       <div className="text-2xl font-bold uppercase">BASIC/DEPT</div>
 
