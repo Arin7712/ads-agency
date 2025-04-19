@@ -8,7 +8,7 @@ const Awards = () => {
       <div className="w-full overflow-x-auto">
         <table className="w-full table-auto">
           <tbody>
-            <tr className="flex justify-between gap-6 md:px-[6rem] flex-wrap">
+            <tr className="flex justify-between gap-4 md:px-[6rem] flex-wrap">
               {awardItems.map((item, index) => (
                 <td key={index} className="md:w-[200px] w-[100px] flex flex-col items-center group cursor-pointer">
                   <div className="md:w-[200px] md:h-[200px] w-[100px] h-[100px] flex items-center justify-center overflow-hidden">
@@ -27,7 +27,7 @@ const Awards = () => {
                       className="object-contain transition-all duration-300 group-hover:scale-110 md:hidden block"
                     />
                   </div>
-                  <p className="uppercase text-xs font-medium underline-offset-2 transition-all group-hover:underline text-center mt-2">
+                  <p className="uppercase text-[10px] md:text-xs font-medium underline-offset-2 transition-all group-hover:underline text-center mt-2">
                     {item.name}
                   </p>
                 </td>
