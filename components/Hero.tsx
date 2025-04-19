@@ -11,6 +11,7 @@ const Hero = () => {
   const [videoSrc, setVideoSrc] = useState("mock.mp4");
   const [showBallCursor, setShowBallCursor] = useState(false); // Track ball cursor visibility
   const [isMuted, setIsMuted] = useState(true); // Track if video is muted
+  const [isMobile, setIsMobile] = useState(false); // New: track mobile
 
   const videoDuration = 59; // exact length!
 
@@ -20,12 +21,12 @@ const Hero = () => {
         videoRef.current.muted = false;
         setVideoSrc("mock.mp4");
         setShowMovingText(true);
-        setIsMuted(false); // Video is unmuted
+        setIsMuted(false);
       } else {
         videoRef.current.muted = true;
         setVideoSrc("mock2.mp4");
         setShowMovingText(false);
-        setIsMuted(true); // Video is muted
+        setIsMuted(true);
       }
       videoRef.current.currentTime = 0;
       videoRef.current.load();
@@ -35,13 +36,26 @@ const Hero = () => {
 
   const handleMouseEnter = () => {
     if (videoRef.current?.muted) {
-      setShowBallCursor(true); // Show ball cursor when muted
+      setShowBallCursor(true);
     }
   };
 
   const handleMouseLeave = () => {
-    setShowBallCursor(false); // Hide ball cursor
+    setShowBallCursor(false);
   };
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
 
   useEffect(() => {
     let animationFrameId: number;
@@ -66,7 +80,7 @@ const Hero = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Conditionally render the BallCursor */}
-      {showBallCursor && isMuted && <BallCursor />}
+      {showBallCursor && isMuted && !isMobile && <BallCursor />}
 
       <video
         ref={videoRef}
@@ -80,35 +94,36 @@ const Hero = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       />
+
       <div className="relative z-10">
         <Navbar />
       </div>
+
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 pointer-events-none"></div>
 
-      <div className="md:hidden block">
-      <div
-      className="flex justify-center items-center w-full h-screen z-50 pointer-events-none"
-    >
-      {/* Ball with text inside */}
-      <div
-        className="w-30 h-30 bg-white rounded-full flex justify-center items-center text-center"
-        style={{ position: "absolute" }}
-      >
-        <span className="text-black text-xs font-semibold uppercase">Watch<br/>reel</span>
-      </div>
+      {/* Mobile View: Watch Reel Ball */}
+      {isMobile && (
+        <div className="flex justify-center items-center w-full h-screen z-50 pointer-events-none">
+          <div className="w-[120px] h-[120px] bg-white rounded-full flex justify-center items-center text-center absolute">
+            <span className="text-black text-xs font-semibold uppercase">
+              Watch
+              <br />
+              Reel
+            </span>
+          </div>
 
-      {/* Text below the ball */}
-      <div
-        className="absolute pt-[10rem] flex text-center transform mt-2 text-white text-xs"
-        style={{
-          whiteSpace: "nowrap",
-        }}
-      >
-        BASIC/DEPT®<br/>
-      </div>
-    </div>
-      </div>
+          <div
+            className="absolute pt-[10rem] flex text-center transform mt-2 text-white text-xs"
+            style={{
+              whiteSpace: "nowrap",
+            }}
+          >
+            BASIC/DEPT®
+          </div>
+        </div>
+      )}
 
+      {/* Moving Time Text */}
       {showMovingText && (
         <div className="absolute bottom-1 left-0 w-full h-10">
           <div
