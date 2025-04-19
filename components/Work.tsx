@@ -30,7 +30,7 @@ const Work = () => {
         {/* For Desktop (flex grid) */}
         <div className="hidden md:flex gap-6">
           {workItems.map((item, index) => (
-            <div key={index} className="flex-1 uppercase flex flex-col gap-4">
+            <div key={index} className="flex-1 uppercase flex flex-col gap-4 group hover:cursor-pointer">
               <Image
                 src={item.img}
                 alt="work"
@@ -39,7 +39,7 @@ const Work = () => {
                 className="w-full h-auto object-cover"
               />
               <div className="flex flex-col gap-2 w-[70%]">
-                <h1 className="text-lg font-bold">{item.name}</h1>
+                <h1 className="text-lg font-bold group-hover:underline">{item.name}</h1>
                 <p className="text-sm font-medium">{item.description}</p>
               </div>
             </div>
