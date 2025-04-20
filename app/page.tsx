@@ -4,6 +4,7 @@ import Awards from "@/components/Awards";
 import BallCursor from "@/components/BallCursor";
 import Featured from "@/components/Featured";
 import Hero from "@/components/Hero";
+import News from "@/components/News";
 import Preloader from "@/components/Preloader";
 import Work from "@/components/Work";
 import Image from "next/image";
@@ -61,8 +62,9 @@ export default function Home() {
           <Featured isAboutVisible={isAboutVisible}/>
           {/* Attach ref to About */}
           <div ref={aboutRef}>
-            <About />
+            <About isAboutVisible={isAboutVisible}/>
           </div>
+          <News isAboutVisible={isAboutVisible}/>
 
         </div>
       </div>

@@ -79,3 +79,34 @@ export const featuredItems = [
         img: '/brand5.webp'
     }
 ]
+
+export const newsItems = [
+    {
+    img: '/news1.webp',
+    title: 'Four nominations for the ineternets highest honor'
+    },
+    {
+        img: '/news2.webp',
+        title: 'Four nominations for the ineternets highest honor'
+    },
+    {
+        img: '/news3.webp',
+        title: "Generation Alpha: Say hello to tomorrow’s shopper"
+    },
+    {
+        img: '/news4.webp',
+        title: "The Future of Fashion and AI at Glossy's Ecommerce Summit"
+    },
+    {
+        img: '/news5.webp',
+        title: "Retail’s new playground: where physical meets digital"
+    },
+    {
+        img: '/news6.webp',
+        title: "Gen Alpha, the beta test for how brands can reach a new generation"
+    },
+    {
+        img: '/news7.webp',
+        title: "New Projects on the Podium for the 28th Webby Awards"
+    }
+]

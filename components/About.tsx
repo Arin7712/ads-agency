@@ -1,6 +1,6 @@
 import React from 'react'
 
-const About = () => {
+const About = ({isAboutVisible} : {isAboutVisible: Boolean}) => {
   return (
     <div className="relative flex flex-col justify-between md:py-10 py-[4rem] md:px-[6rem] px-6">
       <div className="flex md:flex-row flex-col w-full justify-between md:gap-0 gap-[6rem]">
@@ -13,7 +13,7 @@ const About = () => {
               Adweek <span className="font-bold">Agency Spotlight</span>
             </p>
           </div>
-          <div className="rounded-full border-[1px] font-semibold border-background px-8 py-2 w-fit uppercase text-xs">
+          <div className={`rounded-full border-[1px] font-semibold ${isAboutVisible ? 'border-background' : 'border-zinc-800'} px-8 py-2 w-fit uppercase text-xs`}>
             About us
           </div>
         </div>
