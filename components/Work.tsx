@@ -8,7 +8,7 @@ const Work = () => {
   return (
     <div className="relative flex flex-col justify-between md:py-10 py-6 md:px-[6rem] px-6">
       {/* Top Content */}
-      <div className="flex md:flex-row flex-col justify-between items-start md:gap-0 gap-6">
+      <div className="flex md:flex-row flex-col justify-between items-start md:gap-0 gap-12">
         <div className="md:w-[46%] flex flex-col gap-6">
           <h2 className="md:text-4xl text-xl text-neutral-800 font-medium">
             BASIC/DEPT® is a global branding and digital design agency building
@@ -26,7 +26,7 @@ const Work = () => {
       </div>
 
       {/* Work Section */}
-      <div className="w-full pt-[6rem]">
+      <div className="w-full md:pt-[6rem] pt-6">
         {/* For Desktop (flex grid) */}
         <div className="hidden md:flex gap-6">
           {workItems.map((item, index) => (
@@ -52,13 +52,13 @@ const Work = () => {
             {workItems.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col uppercase gap-4 min-w-[300px] max-w-[400px]"
+                className="flex flex-col uppercase gap-4 w-[300px]"
               >
                 <Image
                   src={item.img}
                   alt="work"
-                  width={400}
-                  height={400}
+                  width={300}
+                  height={300}
                   className="w-full h-auto object-cover"
                 />
                 <div className="flex flex-col gap-2 w-[50%]">

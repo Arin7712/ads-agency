@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import BallCursor from "./BallCursor"; // Import BallCursor component
 
-const Hero = () => {
+const Hero = ({isAboutVisible} : {isAboutVisible: Boolean}) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [progress, setProgress] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -96,7 +96,7 @@ const Hero = () => {
       />
 
       <div className="relative z-10">
-        <Navbar />
+        <Navbar isAboutVisible={isAboutVisible}/>
       </div>
 
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 pointer-events-none"></div>

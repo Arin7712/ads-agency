@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { navItems } from "@/constants";
 import { Ellipsis } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ isAboutVisible }: { isAboutVisible: boolean }) => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +19,6 @@ const Navbar = () => {
         setShowNavbar(false);
       }
 
-      // if user scrolled more than 50px, change navbar bg
       if (currentScrollY > 50) {
         setIsScrolled(true);
       } else {
@@ -38,7 +37,13 @@ const Navbar = () => {
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
-      } ${isScrolled ? "bg-[#f1f1f1] text-black" : "bg-transparent text-white"} flex items-center justify-between md:py-10 py-6 md:px-[6rem] px-6`}
+      } ${
+        isScrolled
+          ? isAboutVisible
+            ? "bg-zinc-800 text-[#f9cdcd]" // scrolled + about visible
+            : "bg-white text-black"      // scrolled + about not visible
+          : "bg-transparent text-white"   // not scrolled
+      } flex items-center justify-between md:py-10 py-6 md:px-[6rem] px-6`}
     >
       <div className="text-2xl font-bold uppercase">BASIC/DEPT</div>
 
@@ -53,7 +58,11 @@ const Navbar = () => {
               {item.name}
               <span
                 className={`absolute left-0 bottom-0 h-[1px] w-0 ${
-                  isScrolled ? "bg-black" : "bg-white"
+                  isScrolled
+                    ? isAboutVisible
+                      ? "bg-pink-500" // underline pink when about visible
+                      : "bg-black"    // underline black otherwise
+                    : "bg-white"      // underline white when at top
                 } transition-all duration-500 group-hover:w-full origin-left`}
               ></span>
             </li>
