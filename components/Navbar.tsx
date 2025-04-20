@@ -4,6 +4,15 @@ import React, { useEffect, useState } from "react";
 import { navItems } from "@/constants";
 import { Ellipsis } from "lucide-react";
 
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
 const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -41,8 +50,8 @@ const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
         isScrolled
           ? isAboutVisible
             ? "bg-zinc-800 text-[#f9cdcd]" // scrolled + about visible
-            : "bg-white text-black"      // scrolled + about not visible
-          : "bg-transparent text-white"   // not scrolled
+            : "bg-white text-black" // scrolled + about not visible
+          : "bg-transparent text-white" // not scrolled
       } flex items-center justify-between md:py-10 py-6 md:px-[6rem] px-6`}
     >
       <div className="text-2xl font-bold uppercase">BASIC/DEPT</div>
@@ -61,8 +70,8 @@ const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
                   isScrolled
                     ? isAboutVisible
                       ? "bg-pink-500" // underline pink when about visible
-                      : "bg-black"    // underline black otherwise
-                    : "bg-white"      // underline white when at top
+                      : "bg-black" // underline black otherwise
+                    : "bg-white" // underline white when at top
                 } transition-all duration-500 group-hover:w-full origin-left`}
               ></span>
             </li>
@@ -73,7 +82,25 @@ const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
       <div className="md:block hidden transition-all hover:scale-[1.2] hover:cursor-pointer duration-300">
         <Ellipsis />
       </div>
-      <div className="uppercase md:hidden block">Menu</div>
+      <div className="uppercase md:hidden block">
+        <Sheet>
+          <SheetTrigger className="uppercase">Menu</SheetTrigger>
+          <SheetContent className="w-full bg-zinc-800 text-[#f9cdcd]">
+            <SheetHeader>
+              <SheetTitle className="text-[#f9cdcd] uppercase text-2xl font-bold">Basic/Dept</SheetTitle>
+            </SheetHeader>
+            <div className="pt-[6rem] pl-6">
+              <ul className="space-y-6">
+                {
+                  navItems.map((item, index) => (
+                    <li className="uppercase font-semibold text-xl">{item.name}</li>
+                  ))
+                }
+              </ul>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
     </div>
   );
 };

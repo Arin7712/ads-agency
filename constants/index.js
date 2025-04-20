@@ -110,3 +110,18 @@ export const newsItems = [
         title: "New Projects on the Podium for the 28th Webby Awards"
     }
 ]
+
+export const socials = [
+    {
+        name: 'Twitter',
+    },
+    {
+        name: 'LinkedIn',
+    },
+    {
+        name: 'Instagram',
+    },
+    {
+        name: 'Facebook',
+    }
+]

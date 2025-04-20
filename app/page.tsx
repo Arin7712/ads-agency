@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Awards from "@/components/Awards";
 import BallCursor from "@/components/BallCursor";
 import Featured from "@/components/Featured";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import News from "@/components/News";
 import Preloader from "@/components/Preloader";
@@ -65,7 +66,12 @@ export default function Home() {
             <About isAboutVisible={isAboutVisible}/>
           </div>
           <News isAboutVisible={isAboutVisible}/>
-
+          <Footer/>
+          <div className="h-10 bg-neutral-950 flex md:flex-row md:gap-0 gap-1 flex-col items-center justify-between text-zinc-500 px-[6rem] text-xs">
+          <h1>BASIC/DEPT®, Inc 10 - 25©</h1>
+          <h1>Easy to understand, impossible to ignore.™</h1>
+          <h1>Terms, Privacy Policy</h1>
+</div>
         </div>
       </div>
     </div>
