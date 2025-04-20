@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { navItems } from "@/constants";
 import { Ellipsis } from "lucide-react";
 
-const Navbar = ({ isAboutVisible }: { isAboutVisible: boolean }) => {
+const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
