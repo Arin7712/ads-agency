@@ -67,7 +67,7 @@ export default function Home() {
           </div>
           <News isAboutVisible={isAboutVisible}/>
           <Footer/>
-          <div className="h-10 bg-neutral-950 flex md:flex-row md:gap-0 gap-1 flex-col items-center justify-between text-zinc-500 px-[6rem] text-xs">
+          <div className="py-2 bg-neutral-950 flex md:flex-row md:gap-0 gap-1 flex-col items-center justify-between text-zinc-500 px-[6rem] text-xs">
           <h1>BASIC/DEPT®, Inc 10 - 25©</h1>
           <h1>Easy to understand, impossible to ignore.™</h1>
           <h1>Terms, Privacy Policy</h1>

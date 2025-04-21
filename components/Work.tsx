@@ -6,11 +6,11 @@ import { workItems } from "@/constants";
 
 const Work = () => {
   return (
-    <div className="relative flex flex-col justify-between md:py-10 py-6 md:px-[6rem] px-6">
+    <div className="relative flex flex-col justify-between md:py-10 py-6 lg:px-[6rem] md:px-[2rem] px-6">
       {/* Top Content */}
-      <div className="flex md:flex-row flex-col justify-between items-start md:gap-0 gap-12">
-        <div className="md:w-[46%] flex flex-col gap-6">
-          <h2 className="md:text-4xl text-xl text-neutral-800 font-medium">
+      <div className="flex lg:flex-row flex-col justify-between items-start md:gap-0 gap-12">
+        <div className="lg:w-[46%] md:w-[50%] flex flex-col gap-6">
+          <h2 className="lg:text-4xl md:text-xl text-xl leading-none text-neutral-800 font-medium">
             BASIC/DEPT® is a global branding and digital design agency building
             products, services, and eCommerce experiences that turn cultural
             values into company value.
@@ -20,15 +20,15 @@ const Work = () => {
           </div>
         </div>
 
-        <div className="md:absolute text-neutral-800 top-0 md:right-20 text-[6rem] md:text-[14rem] font-extrabold md:font-bold leading-none flex w-full justify-end">
+        <div className="lg:absolute text-neutral-800 top-0 md:right-20 text-[6rem] md:text-[8rem] lg:text-[14rem] font-extrabold md:font-bold leading-none flex w-full justify-end">
           B/D®
         </div>
       </div>
 
       {/* Work Section */}
-      <div className="w-full md:pt-[6rem] pt-6">
+      <div className="w-full lg:pt-[6rem] pt-6">
         {/* For Desktop (flex grid) */}
-        <div className="hidden md:flex gap-6">
+        <div className="hidden lg:flex gap-6">
           {workItems.map((item, index) => (
             <div key={index} className="flex-1 uppercase flex flex-col gap-4 group hover:cursor-pointer">
               <Image
@@ -47,7 +47,7 @@ const Work = () => {
         </div>
 
         {/* For Mobile (natural horizontal scroll) */}
-        <div className="md:hidden block overflow-x-scroll no-scrollbar">
+        <div className="lg:hidden block overflow-x-scroll no-scrollbar">
           <div className="flex gap-6 w-max">
             {workItems.map((item, index) => (
               <div
@@ -71,7 +71,7 @@ const Work = () => {
         </div>
       </div>
 
-      <div className="border-t-[1px] border-neutral-800 w-full md:mt-[10rem] mt-[3rem] pt-2">
+      <div className="border-t-[1px] border-neutral-800 w-full lg:mt-[10rem] md:mt-[5rem] mt-[3rem] pt-2">
         <div className="flex items-center justify-between text-xs">
           <div className="flex w-[35%] justify-between">
           <p>0</p>

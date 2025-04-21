@@ -2,11 +2,11 @@ import React from 'react'
 
 const About = ({isAboutVisible} : {isAboutVisible: Boolean}) => {
   return (
-    <div className="relative flex flex-col justify-between md:py-10 py-[4rem] md:px-[6rem] px-6">
+    <div className="relative flex flex-col justify-between md:py-10 py-[4rem] lg:px-[6rem] px-6">
       <div className="flex md:flex-row flex-col w-full justify-between md:gap-0 gap-[6rem]">
         <div className="md:max-w-[40%] flex flex-col gap-[4rem]">
           <div className="flex flex-col gap-4">
-            <h1 className="md:text-[6rem] text-[3rem] tracking-tighter font-bold uppercase leading-none">
+            <h1 className="lg:text-[6rem] text-[3rem] tracking-tighter font-bold uppercase leading-none">
               BASIC/DEPT® helps brands ● connect w/ culture
             </h1>
             <p className="uppercase">

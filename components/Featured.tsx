@@ -27,9 +27,9 @@ const Featured = ({isAboutVisible} : {isAboutVisible: Boolean}) => {
   }, []);
 
   return (
-    <div className="relative flex flex-col pt-10 md:py-20 md:px-24 px-6 gap-20 md:gap-24">
+    <div className="relative flex flex-col pt-10 md:py-20 lg:px-24 px-6 gap-20 md:gap-24">
       {/* Title */}
-      <h1 className="md:text-5xl text-2xl font-bold max-w-[40%] uppercase">
+      <h1 className="lg:text-5xl md:text-3xl text-2xl font-bold max-w-[40%] uppercase">
         Featured Engagements
       </h1>
 
@@ -37,7 +37,7 @@ const Featured = ({isAboutVisible} : {isAboutVisible: Boolean}) => {
       <div className="overflow-x-scroll no-scrollbar w-full" ref={scrollRef}>
         <div className="flex gap-16 w-max">
           {featuredItems.map((item, index) => (
-            <div key={index} className="flex flex-col justify-between md:w-96 w-64 md:h-80 h-60">
+            <div key={index} className="flex flex-col justify-between md:w-96 w-64 lg:h-80 md:h-64 h-60">
               <Image src={item.img} alt="logo" width={100} height={100} />
               <div className="flex flex-col gap-2">
                 <h2 className="text-xl font-bold whitespace-nowrap overflow-hidden text-ellipsis uppercase">
