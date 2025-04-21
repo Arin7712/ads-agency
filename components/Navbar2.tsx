@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 
-const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
+const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,14 +45,13 @@ const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full transition-all duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } ${
         isScrolled
-          ? isAboutVisible
-            ? "bg-zinc-800 text-[#f9cdcd]" // scrolled + about visible
-            : "bg-[#f1f1f1] text-black" // scrolled + about not visible
-          : "bg-transparent text-white" // not scrolled
+          ? 
+        "bg-[#f1f1f1] text-black" // scrolled + about not visible
+          : "bg-transparent text-black" // not scrolled
       } flex items-center justify-between md:py-10 py-6 md:px-[6rem] px-6`}
     >
       <div className="text-2xl font-bold uppercase">BASIC/DEPT</div>
@@ -63,15 +62,14 @@ const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
           {navItems.map((item, index) => (
             <Link key={index} href={item.href}>
             <li
-              className="relative cursor-pointer overflow-hidden group"
+              className="relative cursor-pointer overflow-hidden group hover:underline"
             >
               {item.name}
               <span
                 className={`absolute left-0 bottom-0 h-[1px] w-0 ${
                   isScrolled
-                    ? isAboutVisible
-                      ? "bg-pink-500" // underline pink when about visible
-                      : "bg-black" // underline black otherwise
+                    ? 
+                      "bg-black" // underline black otherwise
                     : "bg-white" // underline white when at top
                 } transition-all duration-500 group-hover:w-full origin-left`}
               ></span>
