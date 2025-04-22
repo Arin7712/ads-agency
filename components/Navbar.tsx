@@ -65,7 +65,7 @@ const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
           {navItems.map((item, index) => (
             <Link key={index} href={item.href}>
             <li
-              className="relative cursor-pointer overflow-hidden group"
+              className="relative cursor-pointer overflow-hidden group uppercase"
             >
               {item.name}
               <span

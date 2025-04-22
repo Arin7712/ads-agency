@@ -5,6 +5,7 @@ import BallCursor from "@/components/BallCursor";
 import Featured from "@/components/Featured";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import Hero2 from "@/components/Hero2";
 import News from "@/components/News";
 import Preloader from "@/components/Preloader";
 import Work from "@/components/Work";
@@ -44,13 +45,13 @@ export default function Home() {
 
   return (
     <div className="relative">
-      {!showContent && <Preloader onComplete={() => setShowContent(true)} />}
+      {/* {!showContent && <Preloader onComplete={() => setShowContent(true)} />} */}
 
-      <div
+      {/*<div
         className={`transition-opacity duration-1000 ${
           showContent ? "opacity-100" : "opacity-0"
         }`}
-      >
+      >*/}
         {/* Main Website Content */}
         <div
           className={`grain transition-colors duration-500 ${
@@ -59,7 +60,8 @@ export default function Home() {
               : "bg-[#f1f1f1] text-black"
           }`}
         >
-          <Hero isAboutVisible={isAboutVisible} />
+          {/* <Hero isAboutVisible={isAboutVisible} /> */}
+          <Hero2 isAboutVisible={isAboutVisible} />
           <Awards />
           <Work />
           <Featured isAboutVisible={isAboutVisible} />
@@ -70,7 +72,7 @@ export default function Home() {
           <News isAboutVisible={isAboutVisible} />
           
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
