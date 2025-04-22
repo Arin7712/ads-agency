@@ -6,10 +6,10 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="grain flex flex-col justify-between lg:py-10 md:py-[2rem] py-[4rem] lg:px-[6rem] px-6">
+    <div className="grain flex flex-col justify-between lg:py-10 md:py-[2rem] py-[4rem] lg:px-[6rem] px-6 bg-[#f1f1f1]">
       <Navbar />
       <div className="md:mt-[10rem] mt-[4rem]">
-        <h1 className="lg:text-[6rem] md:text-5xl text-neutral-900 text-4xl uppercase font-extrabold md:w-[50%] w-[70%] leading-none">
+        <h1 className="lg:text-[6rem] md:text-5xl text-neutral-900 text-4xl uppercase font-extrabold md:w-[50%] leading-none">
           Easy to understand. ● Impossible to ignore.
         </h1>
         <Tabs defaultValue="account" className="w-full lg:pt-[10rem] pt-[4rem]">
