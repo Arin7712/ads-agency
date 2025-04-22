@@ -55,7 +55,9 @@ const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
           : "bg-transparent text-white" // not scrolled
       } flex items-center justify-between md:py-10 py-6 lg:px-[6rem] md:px-[3rem] px-6`}
     >
+      <Link href='/'>
       <div className="text-2xl font-bold uppercase">BASIC/DEPT</div>
+      </Link>
 
       {/* Center nav items */}
       <div className="absolute left-1/2 transform -translate-x-1/2 lg:block hidden">
@@ -95,7 +97,9 @@ const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
               <ul className="space-y-6">
                 {
                   navItems.map((item, index) => (
+                    <Link key={index} href={item.href}>
                     <li className="uppercase font-semibold text-xl">{item.name}</li>
+                    </Link>
                   ))
                 }
               </ul>

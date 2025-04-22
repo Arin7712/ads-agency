@@ -52,12 +52,12 @@ const Navbar = () => {
           ? 
         "bg-[#f1f1f1] text-black" // scrolled + about not visible
           : "bg-transparent text-black" // not scrolled
-      } flex items-center justify-between md:py-10 py-6 md:px-[6rem] px-6`}
+      } flex items-center justify-between md:py-10 py-6 lg:px-[6rem] px-6`}
     >
       <div className="text-2xl font-bold uppercase">BASIC/DEPT</div>
 
       {/* Center nav items */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 md:block hidden">
+      <div className="absolute left-1/2 transform -translate-x-1/2 lg:block hidden">
         <ul className="flex items-center gap-x-[4rem]">
           {navItems.map((item, index) => (
             <Link key={index} href={item.href}>
@@ -79,10 +79,10 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="md:block hidden transition-all hover:scale-[1.2] hover:cursor-pointer duration-300">
+      <div className="lg:block hidden transition-all hover:scale-[1.2] hover:cursor-pointer duration-300">
         <Ellipsis />
       </div>
-      <div className="uppercase md:hidden block">
+      <div className="uppercase lg:hidden block">
         <Sheet>
           <SheetTrigger className="uppercase">Menu</SheetTrigger>
           <SheetContent className="w-full bg-zinc-800 text-[#f9cdcd]">

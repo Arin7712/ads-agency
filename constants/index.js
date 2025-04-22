@@ -117,6 +117,76 @@ export const newsItems = [
     }
 ]
 
+export const serviceItems = [
+    {
+        title: 'Email marketing',
+        description: 'We go beyond best practices and build best-in-class D2C channels that drive commerce, shape culture, and define categories.',
+        items: [
+            {
+                brand: 'Whoop',
+                description: 'Whoop.com - building a sophisticated digital experience for a one-of-a-kind product.',
+                img: '/s1.webp'
+            },
+            {
+                brand: 'Whoop',
+                description: 'Whoop.com - building a sophisticated digital experience for a one-of-a-kind product.',
+                img: '/s2.webp'
+            }
+        ]
+    },
+    {
+        title: 'Website +   Platforms',
+        description: 'We go beyond best practices and build best-in-class D2C channels that drive commerce, shape culture, and define categories.',
+        items: [
+            {
+                brand: 'Whoop',
+                description: 'Whoop.com - building a sophisticated digital experience for a one-of-a-kind product.',
+                img: '/s3.webp'
+            },
+            {
+                brand: 'Whoop',
+                description: 'Whoop.com - building a sophisticated digital experience for a one-of-a-kind product.',
+                img: '/s4.webp'
+            }
+        ]
+    }
+]
+
+export const industryItems = [
+    {
+        title: 'Retail + Ecommerce',
+        description: 'We go beyond best practices and build best-in-class D2C channels that drive commerce, shape culture, and define categories.',
+        items: [
+            {
+                brand: 'The prisoner',
+                description: 'Creating a world fit for a uniquely unusual brand.',
+                img: '/i1.webp'
+            },
+            {
+                brand: 'Jeff Knoos',
+                description: 'Tailoring celestial site for a lunar gallery.',
+                img: '/i2.png'
+            }
+        ]
+    },
+    {
+        title: 'Food +   Beverage',
+        description: 'We go beyond best practices and build best-in-class D2C channels that drive commerce, shape culture, and define categories.',
+        items: [
+            {
+                brand: 'Ocean Spary',
+                description: 'Oceanspray.com — Curating fresh ways to discover the berry, the brand, and the people behind both.',
+                img: '/i3.webp'
+            },
+            {
+                brand: 'Kfc',
+                description: 'A transformed digital ordering platform, merging KFC’s iconic brand with unparalleled convenience.',
+                img: '/i4.webp'
+            }
+        ]
+    }
+]
+
 export const socials = [
     {
         name: 'Twitter',

@@ -20,7 +20,7 @@ export default function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsAboutVisible(true);
           } else {
@@ -54,24 +54,21 @@ export default function Home() {
         {/* Main Website Content */}
         <div
           className={`grain transition-colors duration-500 ${
-            isAboutVisible ? "bg-zinc-800 text-[#f9cdcd]" : "bg-[#f1f1f1] text-black"
+            isAboutVisible
+              ? "bg-zinc-800 text-[#f9cdcd]"
+              : "bg-[#f1f1f1] text-black"
           }`}
         >
-          <Hero isAboutVisible={isAboutVisible}/>
+          <Hero isAboutVisible={isAboutVisible} />
           <Awards />
           <Work />
-          <Featured isAboutVisible={isAboutVisible}/>
+          <Featured isAboutVisible={isAboutVisible} />
           {/* Attach ref to About */}
           <div ref={aboutRef}>
-            <About isAboutVisible={isAboutVisible}/>
+            <About isAboutVisible={isAboutVisible} />
           </div>
-          <News isAboutVisible={isAboutVisible}/>
-          <Footer/>
-          <div className="py-2 bg-neutral-950 flex md:flex-row md:gap-0 gap-1 flex-col items-center justify-between text-zinc-500 px-[6rem] text-xs">
-          <h1>BASIC/DEPT®, Inc 10 - 25©</h1>
-          <h1>Easy to understand, impossible to ignore.™</h1>
-          <h1>Terms, Privacy Policy</h1>
-</div>
+          <News isAboutVisible={isAboutVisible} />
+          
         </div>
       </div>
     </div>
