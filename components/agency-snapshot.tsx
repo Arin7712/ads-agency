@@ -9,8 +9,8 @@ const AgencySnapShot = () => {
       </div>
       <div className='grid md:grid-cols-2 gap-6 w-full gap-y-[6rem]'>
             {
-                snapShotItems.map((item, indedx) => (
-                    <div>
+                snapShotItems.map((item, index) => (
+                    <div key={index}>
                     <div className='md:flex flex-col gap-6 md:w-[20rem] hidden'>
                         <h1 className='text-3xl uppercase font-bold'>{item.title}</h1>
                         <h1 className='text-[5rem] leading-none font-bold'>{item.num}</h1>

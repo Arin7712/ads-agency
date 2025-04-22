@@ -50,13 +50,13 @@ const Navbar = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
       } ${
         isScrolled
           ? isAboutVisible
-            ? "bg-zinc-800 text-[#f9cdcd]" // scrolled + about visible
+            ? "bg-black text-white" // scrolled + about visible
             : "bg-[#f1f1f1] text-black" // scrolled + about not visible
           : "bg-transparent text-white" // not scrolled
       } flex items-center justify-between md:py-10 py-6 lg:px-[6rem] md:px-[3rem] px-6`}
     >
       <Link href='/'>
-      <div className="text-2xl font-bold uppercase">BASIC/DEPT</div>
+      <div className="text-2xl font-extrabold uppercase">Vision®</div>
       </Link>
 
       {/* Center nav items */}

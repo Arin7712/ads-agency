@@ -50,7 +50,7 @@ const Navbar = () => {
       } ${
         isScrolled
           ? 
-        "bg-[#f1f1f1] text-black" // scrolled + about not visible
+           "bg-black text-white" // scrolled + about visible
           : "bg-transparent text-black" // not scrolled
       } flex items-center justify-between md:py-10 py-6 lg:px-[6rem] px-6`}
     >

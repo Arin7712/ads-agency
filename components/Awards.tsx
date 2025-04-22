@@ -27,7 +27,7 @@ const Awards = () => {
                       className="object-contain transition-all duration-300 group-hover:scale-110 md:hidden block"
                     />
                   </div>
-                  <p className="uppercase text-[10px] md:text-xs font-medium underline-offset-2 transition-all group-hover:underline text-center mt-2">
+                  <p className="uppercase text-[10px] md:text-sm font-semibold underline-offset-2 transition-all group-hover:underline text-center mt-2">
                     {item.name}
                   </p>
                 </td>

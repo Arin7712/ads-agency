@@ -11,8 +11,8 @@ const Work = () => {
       <div className="flex lg:flex-row flex-col justify-between items-start md:gap-0 gap-12">
         <div className="lg:w-[46%] md:w-[50%] flex flex-col gap-6">
           <h2 className="lg:text-4xl md:text-xl text-xl leading-none text-neutral-800 font-medium">
-            BASIC/DEPT® is a global branding and digital design agency building
-            products, services, and eCommerce experiences that turn cultural
+          Vision® is a global advertising and email marketing agency building
+            products, services, and digital experiences that turn cultural
             values into company value.
           </h2>
           <div className="rounded-full border-[1px] font-semibold border-neutral-800 px-8 py-2 w-fit uppercase text-xs">
@@ -21,7 +21,7 @@ const Work = () => {
         </div>
 
         <div className="lg:absolute text-neutral-800 top-0 md:right-20 text-[6rem] md:text-[8rem] lg:text-[14rem] font-extrabold md:font-bold leading-none flex w-full justify-end">
-          B/D®
+          V/A®
         </div>
       </div>
 
@@ -36,7 +36,7 @@ const Work = () => {
                 alt="work"
                 width={400}
                 height={400}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover transform transition-transform group-hover:scale-[1.02]"
               />
               <div className="flex flex-col gap-2 w-[70%]">
                 <h1 className="text-lg font-bold group-hover:underline">{item.name}</h1>

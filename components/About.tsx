@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
+import AgencySnapShot from './agency-snapshot'
 
 const About = ({isAboutVisible} : {isAboutVisible: Boolean}) => {
   return (
@@ -6,16 +8,18 @@ const About = ({isAboutVisible} : {isAboutVisible: Boolean}) => {
       <div className="flex md:flex-row flex-col w-full justify-between md:gap-0 gap-[6rem]">
         <div className="md:max-w-[40%] flex flex-col gap-[4rem]">
           <div className="flex flex-col gap-4">
-            <h1 className="lg:text-[6rem] text-[3rem] tracking-tighter font-bold uppercase leading-none">
-              BASIC/DEPT® helps brands ● connect w/ culture
+            <h1 className="lg:text-[5.7rem] text-[3rem] tracking-tighter font-bold uppercase leading-none">
+              Vision/Media® helps brands ● connect w/ culture
             </h1>
             <p className="uppercase">
               Adweek <span className="font-bold">Agency Spotlight</span>
             </p>
           </div>
+          <Link href='/about'>
           <div className={`rounded-full border-[1px] font-semibold ${isAboutVisible ? 'border-background' : 'border-zinc-800'} px-8 py-2 w-fit uppercase text-xs`}>
             About us
           </div>
+          </Link>
         </div>
 
         <div className="md:w-[50%] flex items-center justify-center md:order-1 order-[-1]">

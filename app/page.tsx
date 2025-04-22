@@ -56,7 +56,7 @@ export default function Home() {
         <div
           className={`grain transition-colors duration-500 ${
             isAboutVisible
-              ? "bg-zinc-800 text-[#f9cdcd]"
+              ? "bg-black text-white"
               : "bg-[#f1f1f1] text-black"
           }`}
         >
@@ -64,11 +64,11 @@ export default function Home() {
           <Hero2 isAboutVisible={isAboutVisible} />
           <Awards />
           <Work />
-          <Featured isAboutVisible={isAboutVisible} />
           {/* Attach ref to About */}
           <div ref={aboutRef}>
             <About isAboutVisible={isAboutVisible} />
           </div>
+          <Featured isAboutVisible={isAboutVisible} />
           <News isAboutVisible={isAboutVisible} />
           
         </div>

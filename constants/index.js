@@ -27,16 +27,16 @@ export const navItems = [
 
 export const awardItems = [
     {
-        name: 'Design and branding agency of the year',
-        img: '/logo1.png'
+        name: '500k+ Views Generated',
+        img: '/icon1.png'
     },
     {
-        name: 'Agency of the year',
-        img: '/logo2.png'
+        name: '100+ Successful campaigns',
+        img: '/icon2.png'
     },
     {
-        name: 'Digital innovation agency of the year finalist',
-        img: '/logo3.png'
+        name: '5m+ people reached',
+        img: '/icon3.png'
     }
 ]
 

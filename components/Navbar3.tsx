@@ -50,11 +50,14 @@ const Navbar = () => {
       } ${
         isScrolled
           ? 
-        "bg-neutral-900 text-[#f9cdcd]" // scrolled + about not visible
-          : "bg-transparent text-[#f9cdcd]" // not scrolled
+        "bg-black text-white" // scrolled + about not visible
+        : "bg-black text-white" // scrolled + about visible
       } flex items-center justify-between md:py-10 py-6 lg:px-[6rem] px-6`}
     >
-      <div className="text-2xl font-bold uppercase">BASIC/DEPT</div>
+      <Link href='/'>
+      
+      <div className="text-2xl font-bold uppercase">VISION®</div>
+      </Link>
 
       {/* Center nav items */}
       <div className="absolute left-1/2 transform -translate-x-1/2 lg:block hidden">
@@ -85,9 +88,9 @@ const Navbar = () => {
       <div className="uppercase lg:hidden block">
         <Sheet>
           <SheetTrigger className="uppercase">Menu</SheetTrigger>
-          <SheetContent className="w-full bg-zinc-800 text-[#f9cdcd]">
+          <SheetContent className="w-full bg-black text-white">
             <SheetHeader>
-              <SheetTitle className="text-[#f9cdcd] uppercase text-2xl font-bold">Basic/Dept</SheetTitle>
+              <SheetTitle className="text-white uppercase text-2xl font-bold">Basic/Dept</SheetTitle>
             </SheetHeader>
             <div className="pt-[6rem] pl-6">
               <ul className="space-y-6">

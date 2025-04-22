@@ -103,7 +103,7 @@ useEffect(() => {
           passion — and fuelled by curiosity.
         </p>
         </div>
-        <h1 className="md:text-6xl text-5xl font-bold  text-center uppercase" data-aos='fade-up'>Basic Agency</h1>
+        <h1 className="md:text-6xl text-5xl font-bold  text-center uppercase" data-aos='fade-up'>Vision Agency</h1>
         <p
         data-aos='fade-down'
         data-aos-delay='300'

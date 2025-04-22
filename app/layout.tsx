@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
-const font = DM_Sans({ subsets: ["latin"] });
+const font =  Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
