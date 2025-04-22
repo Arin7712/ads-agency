@@ -1,7 +1,9 @@
+
 import type { Metadata } from "next";
 import { DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import BottomFooter from "@/components/BottomFooter";
 
 const font =  Inter({ subsets: ["latin"] });
 
@@ -15,6 +17,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <body
@@ -22,11 +26,7 @@ export default function RootLayout({
       >
         {children}
         <Footer/>
-          <div className="py-2 bg-neutral-950 flex md:flex-row md:gap-0 gap-1 flex-col items-center justify-between text-zinc-500 px-[6rem] text-xs">
-            <h1>BASIC/DEPT®, Inc 10 - 25©</h1>
-            <h1>Easy to understand, impossible to ignore.™</h1>
-            <h1>Terms, Privacy Policy</h1>
-          </div>
+        <BottomFooter/>
       </body>
     </html>
   );

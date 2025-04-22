@@ -8,8 +8,8 @@ const page = () => {
   return (
     <div className="grain flex flex-col justify-between lg:py-10 md:py-[2rem] py-[4rem] lg:px-[6rem] px-6 bg-[#f1f1f1]">
       <Navbar />
-      <div className="md:mt-[10rem] mt-[4rem]">
-        <h1 className="lg:text-[6rem] md:text-5xl text-neutral-900 text-4xl uppercase font-extrabold md:w-[50%] leading-none">
+      <div className="md:mt-[10rem] mt-[4rem] md:pb-[6rem]">
+        <h1 className="lg:text-[6rem] md:text-5xl text-neutral-900 text-4xl uppercase font-extrabold md:w-[55%] leading-none">
           Easy to understand. ● Impossible to ignore.
         </h1>
         <Tabs defaultValue="account" className="w-full lg:pt-[10rem] pt-[4rem]">
@@ -30,11 +30,17 @@ const page = () => {
             <TabsContent value="account" className="w-full">
               <div className="flex flex-col w-full justify-between lg:gap-6 gap-6">
                 {serviceItems.map((item, index) => (
-                  <div key={index} className={`flex lg:flex-row flex-col justify-between lg:h-[40rem] ${index > 0 ? 'border-t-[1px] pt-6 border-t-zinc-900': 'md:pb-[4rem]'}`}>
+                  <div
+                    key={index}
+                    className={`flex lg:flex-row flex-col justify-between lg:h-[40rem] ${
+                      index > 0
+                        ? "border-t-[1px] pt-6 border-t-zinc-900"
+                        : "md:pb-[4rem]"
+                    }`}
+                  >
                     <div className="lg:w-[50%] lg:border-r-[1px] lg:border-r-zinc-800 flex flex-col justify-between h-full">
                       <div className="flex justify-between pr-4 font-medium">
-                      <p className="">0{index + 1}</p>{" "}
-                      <p>/04</p>
+                        <p className="">0{index + 1}</p> <p>/04</p>
                       </div>
                       <div className="flex flex-col justify-center flex-1 gap-6 lg:pt-0 pt-[4rem]">
                         {" "}
@@ -76,43 +82,52 @@ const page = () => {
                     </div>
 
                     <div className="md:hidden block overflow-x-scroll no-scrollbar pt-[4rem]">
-                              <div className="flex gap-6 w-max">
-                                {item.items.map((item, index) => (
-                                  <div
-                                    key={index}
-                                    className="flex flex-col uppercase gap-4 w-[300px]"
-                                  >
-                                    <Image
-                                      src={item.img}
-                                      alt="work"
-                                      width={300}
-                                      height={300}
-                                      className="w-full h-auto object-cover"
-                                    />
-                                    <div className="flex flex-col gap-2 w-[50%]">
-                                      <h1 className="text-lg font-bold">{item.brand}</h1>
-                                      <p className="text-[10px] font-medium">{item.description}</p>
-                                    </div>
-                                  </div>
-                                ))}
-                              </div>
+                      <div className="flex gap-6 w-max">
+                        {item.items.map((item, index) => (
+                          <div
+                            key={index}
+                            className="flex flex-col uppercase gap-4 w-[300px]"
+                          >
+                            <Image
+                              src={item.img}
+                              alt="work"
+                              width={300}
+                              height={300}
+                              className="w-full h-auto object-cover"
+                            />
+                            <div className="flex flex-col gap-2 w-[50%]">
+                              <h1 className="text-lg font-bold">
+                                {item.brand}
+                              </h1>
+                              <p className="text-[10px] font-medium">
+                                {item.description}
+                              </p>
                             </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
             </TabsContent>
             <TabsContent value="password">
-            <div className="flex flex-col w-full justify-between lg:gap-6 gap-6">
+              <div className="flex flex-col w-full justify-between lg:gap-6 gap-6">
                 {industryItems.map((item, index) => (
-                  <div key={index} className={`flex lg:flex-row flex-col justify-between lg:h-[40rem] ${index > 0 ? 'border-t-[1px] pt-6 border-t-zinc-900': 'md:pb-[4rem]'}`}>
+                  <div
+                    key={index}
+                    className={`flex lg:flex-row flex-col justify-between lg:h-[40rem] ${
+                      index > 0 ? "border-t-[1px] pt-6 border-t-zinc-900" : ""
+                    }`}
+                  >
+                    {/* Left side */}
                     <div className="lg:w-[50%] lg:border-r-[1px] lg:border-r-zinc-800 flex flex-col justify-between h-full">
                       <div className="flex justify-between pr-4 font-medium">
-                      <p className="">0{index + 1}</p>{" "}
-                      <p>/04</p>
+                        <p>0{index + 1}</p>
+                        <p>/04</p>
                       </div>
+
                       <div className="flex flex-col justify-center flex-1 gap-6 lg:pt-0 pt-[4rem]">
-                        {" "}
-                        {/* Centered group */}
                         <h1 className="lg:text-4xl text-2xl font-extrabold uppercase w-[70%] leading-none">
                           {item.title}
                         </h1>
@@ -124,7 +139,9 @@ const page = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="md:flex hidden gap-6 lg:pl-4 lg:pt-0 pt-[4rem]">
+
+                    {/* Right side for desktop */}
+                    <div className="md:flex hidden w-full gap-6 lg:pl-4 lg:pt-0 pt-[4rem]">
                       {item.items.map((item, index) => (
                         <div
                           key={index}
@@ -149,28 +166,33 @@ const page = () => {
                       ))}
                     </div>
 
+                    {/* Right side for mobile */}
                     <div className="md:hidden block overflow-x-scroll no-scrollbar pt-[4rem]">
-                              <div className="flex gap-6 w-max">
-                                {item.items.map((item, index) => (
-                                  <div
-                                    key={index}
-                                    className="flex flex-col uppercase gap-4 w-[300px]"
-                                  >
-                                    <Image
-                                      src={item.img}
-                                      alt="work"
-                                      width={300}
-                                      height={300}
-                                      className="w-full h-auto object-cover"
-                                    />
-                                    <div className="flex flex-col gap-2 w-[50%]">
-                                      <h1 className="text-lg font-bold">{item.brand}</h1>
-                                      <p className="text-[10px] font-medium">{item.description}</p>
-                                    </div>
-                                  </div>
-                                ))}
-                              </div>
+                      <div className="flex gap-6 w-max">
+                        {item.items.map((item, index) => (
+                          <div
+                            key={index}
+                            className="flex flex-col uppercase gap-4 w-[300px]"
+                          >
+                            <Image
+                              src={item.img}
+                              alt="work"
+                              width={300}
+                              height={300}
+                              className="w-full h-auto object-cover"
+                            />
+                            <div className="flex flex-col gap-2 w-[50%]">
+                              <h1 className="text-lg font-bold">
+                                {item.brand}
+                              </h1>
+                              <p className="text-[10px] font-medium">
+                                {item.description}
+                              </p>
                             </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

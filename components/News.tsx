@@ -5,11 +5,11 @@ import React from "react";
 
 const News = ({ isAboutVisible }: { isAboutVisible: Boolean }) => {
   return (
-    <div className="relative flex flex-col justify-between md:py-[6rem] lg:px-[6rem] px-6">
+    <div className="relative flex flex-col justify-between md:py-[6rem] py-10 lg:px-[6rem] px-6">
       <div className="flex justify-between items-center">
         <h1 className="md:text-5xl text-2xl font-bold uppercase">
           Featured <br />
-          News
+          Products
         </h1>
         <div>
           <div

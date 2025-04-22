@@ -1,22 +1,20 @@
-"use client";
-import About from "@/components/About";
-import Awards from "@/components/Awards";
-import BallCursor from "@/components/BallCursor";
-import Featured from "@/components/Featured";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Hero2 from "@/components/Hero2";
-import News from "@/components/News";
-import Preloader from "@/components/Preloader";
-import Work from "@/components/Work";
-import Image from "next/image";
+'use client'
 import { useState, useRef, useEffect } from "react";
+import About from "@/components/About";
+import AgencySnapShot from "@/components/agency-snapshot";
+import Awards from "@/components/Awards";
+import Featured from "@/components/Featured";
+import News from "@/components/News";
+import Work from "@/components/Work";
+import Hero2 from "@/components/Hero2";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
   const [isAboutVisible, setIsAboutVisible] = useState(false);
+  const [isAgencyVisible, setIsAgencyVisible] = useState(false);
 
   const aboutRef = useRef(null);
+  const agencyRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,36 +41,54 @@ export default function Home() {
     };
   }, []);
 
-  return (
-    <div className="relative">
-      {/* {!showContent && <Preloader onComplete={() => setShowContent(true)} />} */}
+  const scrollRef = useRef(null);
 
-      {/*<div
-        className={`transition-opacity duration-1000 ${
-          showContent ? "opacity-100" : "opacity-0"
-        }`}
-      >*/}
-        {/* Main Website Content */}
-        <div
-          className={`grain transition-colors duration-500 ${
-            isAboutVisible
-              ? "bg-black text-white"
-              : "bg-[#f1f1f1] text-black"
-          }`}
-        >
-          {/* <Hero isAboutVisible={isAboutVisible} /> */}
-          <Hero2 isAboutVisible={isAboutVisible} />
-          <Awards />
-          <Work />
-          {/* Attach ref to About */}
-          <div ref={aboutRef}>
-            <About isAboutVisible={isAboutVisible} />
-          </div>
-          <Featured isAboutVisible={isAboutVisible} />
-          <News isAboutVisible={isAboutVisible} />
-          
+  useEffect(() => {
+    let scroll: any;
+    if (typeof window !== "undefined") {
+      // Dynamically import LocomotiveScroll to ensure it only runs in the browser
+      const LocomotiveScroll = require("locomotive-scroll").default;
+
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        multiplier: 0.3, // Adjust scroll pace
+      });
+    }
+
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
+
+  const getBackgroundClass = () => {
+    if (isAgencyVisible) {
+      return "bg-black text-white"; // When agency snapshot is visible
+    } else if (isAboutVisible) {
+      return "bg-black text-white"; // When about is visible
+    } else {
+      return "bg-[#f1f1f1] text-black"; // Default background
+    }
+  };
+
+  return (
+    <div data-scroll-container ref={scrollRef} className="relative" data-scroll-section>
+      <div className={`grain transition-colors duration-500 ${getBackgroundClass()}`}>
+        <Hero2 isAboutVisible={isAboutVisible} />
+        <Awards />
+        <Work />        
+        {/* About Section */}
+        <div ref={aboutRef}>
+          <About isAboutVisible={isAboutVisible} />
         </div>
-      {/* </div> */}
+        {/* Featured Section */}
+        <Featured isAboutVisible={isAboutVisible} />
+        {/* Agency Snapshot Section */}
+        <div className="flex flex-col justify-between md:py-6 py-[4rem] lg:px-[6rem] px-6">
+          <AgencySnapShot />
+        </div>
+        <News isAboutVisible={isAboutVisible} />
+      </div>
     </div>
   );
 }

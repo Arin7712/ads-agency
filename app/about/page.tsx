@@ -25,7 +25,7 @@ const page = () => {
       </div>
 
       <div className="flex flex-col gap-2 lg:mt-[4rem] md:mt-[5rem] mt-[3rem] ">
-        <h1 className="font-bold">B/D</h1>
+        <h1 className="font-bold">V/A</h1>
         <div className="border-t-[1px] border-white w-full pt-2">
           <div className="flex items-center justify-between text-xs">
             <div className="flex w-[35%] justify-between">
@@ -39,7 +39,7 @@ const page = () => {
 {/* <h1>Dept</h1> */}
       <AboutGallery/>
       <div className="border-t-[1px] border-white py-4 w-full">
-        <h1 className="lg:text-[10rem] text-[3rem] font-extrabold leading-none">BASIC/DEPT®</h1>
+        <h1 className="lg:text-[10rem] text-[3rem] font-extrabold leading-none">VISION®</h1>
       </div>
       <div className="flex flex-col gap-2">
         <div className="border-t-[1px] border-white w-full pt-2">

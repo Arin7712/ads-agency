@@ -73,7 +73,7 @@ const Navbar = () => {
                   isScrolled
                     ? 
                       "bg-black" // underline black otherwise
-                    : "bg-white" // underline white when at top
+                    : "bg-black" // underline white when at top
                 } transition-all duration-500 group-hover:w-full origin-left`}
               ></span>
             </li>

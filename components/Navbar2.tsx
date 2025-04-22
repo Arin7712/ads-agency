@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full transition-all duration-300 z-30 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } ${
         isScrolled
@@ -54,7 +54,7 @@ const Navbar = () => {
           : "bg-transparent text-black" // not scrolled
       } flex items-center justify-between md:py-10 py-6 lg:px-[6rem] px-6`}
     >
-      <div className="text-2xl font-bold uppercase">BASIC/DEPT</div>
+      <div className="text-2xl font-bold uppercase">VISION®</div>
 
       {/* Center nav items */}
       <div className="absolute left-1/2 transform -translate-x-1/2 lg:block hidden">

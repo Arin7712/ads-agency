@@ -6,7 +6,7 @@ const AboutGallery = () => {
     <div className="flex lg:flex-row flex-col items-center justify-center min-h-screen py-[6rem]">
       <div className="lg:w-[40%] lg:block flex justify-end">
         <h1 className="lg:w-[80%] md:w-[45%] w-[65%] uppercase text-xs">
-          Easy to understand. Impossible to ignore.™ BASIC/DEPT®, Inc 10 - 25©
+          Easy to understand. Impossible to ignore.™ VISION®, Inc 10 - 25©
         </h1>
       </div>
       <div className="relative w-full h-[70rem] lg:order-1 order-[-1] lg:block hidden">
