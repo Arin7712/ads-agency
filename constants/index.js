@@ -201,3 +201,36 @@ export const socials = [
         name: 'Facebook',
     }
 ]
+
+export const snapShotItems = [
+    {
+        title: 'People',
+        description: "We're a world-class team of diverse individuals who are here to do great work as well as be great to work with.",
+        num: '120+'
+    },
+    {
+        title: 'Global reach',
+        description: "As part of Dept, we have 28 offices and 1,500+ people across the world dedicated to delivering the best design, strategy, and technology services to our client partners.",
+        num: "28"
+    },
+    {
+        title: 'Years',
+        description: "While we’re proud of our history and our accomplishments, we’re loyal to our future and not our past.",
+        num: '10'
+    },
+    {
+        title: 'Growth',
+        description: "As Adweek’s 18th fastest growing agency, we’ve strengthened our company with new leadership, talent, and clients the past two years. We’re hiring btw.",
+        num: '168%'
+    },
+    {
+        title: 'Services',
+        description: "Strategy. Brand Experience. Digital Experience. Content. Technology. We’re uniquely built to build brands that matter in culture.",
+        num: '05'
+    },
+    {
+        title: 'Ranking',
+        description: 'Within the mobile and website related categories, no other agency has been recognized by the Webby Awards more than us the past four years. Explore our work.',
+        num: '01'
+    }
+]

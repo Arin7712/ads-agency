@@ -1,4 +1,5 @@
 import AboutGallery from "@/components/about-gallery";
+import AgencySnapShot from "@/components/agency-snapshot";
 import Navbar from "@/components/Navbar3";
 import React from "react";
 
@@ -31,12 +32,38 @@ const page = () => {
               <p>2010 -</p>
               <p className="">PRESENT</p>
             </div>
-            <p className="w-2 h-2 bg-neutral-800 rounded-full"></p>
+            <p className="w-2 h-2 bg-[#f9cdcd] rounded-full"></p>
           </div>
         </div>
       </div>
 {/* <h1>Dept</h1> */}
       <AboutGallery/>
+      <div className="border-t-[1px] border-[#f9cdcd] py-4 w-full">
+        <h1 className="lg:text-[10rem] text-[3rem] font-extrabold leading-none">BASIC/DEPT®</h1>
+      </div>
+      <div className="flex flex-col gap-2">
+        <div className="border-t-[1px] border-[#f9cdcd] w-full pt-2">
+          <div className="flex items-center justify-between text-xs">
+            <div className="flex w-[35%] justify-between">
+              <p>SEC.</p>
+              <p className="">/A</p>
+            </div>
+            <p className="w-2 h-2 bg-[#f9cdcd] rounded-full"></p>
+          </div>
+        </div>
+      </div>
+      <AgencySnapShot/>
+      <div className="flex flex-col gap-2 lg:mt-[4rem] md:mt-[5rem] mt-[3rem] ">
+        <div className="border-t-[1px] border-[#f9cdcd] w-full pt-2">
+          <div className="flex items-center justify-between text-xs">
+            <div className="flex w-[35%] justify-between">
+              <p>SEC.</p>
+              <p className="">/B</p>
+            </div>
+            <p className="w-2 h-2 bg-[#f9cdcd] rounded-full"></p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
