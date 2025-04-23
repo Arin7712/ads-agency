@@ -10,7 +10,7 @@ const Work = () => {
       {/* Top Content */}
       <div className="flex lg:flex-row flex-col justify-between items-start md:gap-0 gap-12">
         <div className="lg:w-[46%] md:w-[50%] flex flex-col gap-6">
-          <h2 className="lg:text-4xl md:text-xl text-xl leading-6 text-neutral-800 font-medium">
+          <h2 className="lg:text-4xl md:text-xl text-xl md:leading-none leading-6 text-neutral-800 font-medium">
           VISION® is a global advertising and email marketing agency building
             products, services, and digital experiences that turn cultural
             values into company value.
