@@ -4,7 +4,7 @@ import React from 'react'
 
 const Awards = () => {
   return (
-    <div className="flex justify-center py-[6rem] lg:py-[12rem] lg:mx-[6rem] md:mx-[2rem] mx-6 border-b-zinc-800 border-b-[1px] mb-10 text-neutral-800">
+    <div className="flex justify-center py-[4rem] md:py-[6rem] lg:py-[12rem] lg:mx-[6rem] md:mx-[2rem] mx-6 border-b-zinc-800 border-b-[1px] mb-10 text-neutral-800">
       <div className="w-full overflow-x-auto">
         <table className="w-full table-auto">
           <tbody>

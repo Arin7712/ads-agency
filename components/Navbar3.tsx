@@ -93,10 +93,12 @@ const Navbar = () => {
               <SheetTitle className="text-white uppercase text-2xl font-bold">Basic/Dept</SheetTitle>
             </SheetHeader>
             <div className="pt-[6rem] pl-6">
-              <ul className="space-y-6">
-                {
+            <ul className="flex flex-col gap-6">
+            {
                   navItems.map((item, index) => (
+                    <Link key={index} href={item.href}>
                     <li className="uppercase font-semibold text-xl">{item.name}</li>
+                    </Link>
                   ))
                 }
               </ul>

@@ -17,7 +17,7 @@ const AgencySnapShot = () => {
                         <p className='font-medium'>{item.description}</p>
                     </div>
                     
-                    <div className='flex justify-between gap-6 md:w-[20rem] md:hidden'>
+                    <div className='flex w-full justify-between gap-6 md:w-[20rem] md:hidden'>
                         <div>
                         <h1 className='text-4xl leading-none font-bold'>{item.num}</h1>
                         </div>

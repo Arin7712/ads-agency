@@ -85,15 +85,17 @@ const Navbar = () => {
       <div className="uppercase lg:hidden block">
         <Sheet>
           <SheetTrigger className="uppercase">Menu</SheetTrigger>
-          <SheetContent className="w-full bg-zinc-800 text-[#f9cdcd]">
+          <SheetContent className="w-full bg-black text-white">
             <SheetHeader>
-              <SheetTitle className="text-[#f9cdcd] uppercase text-2xl font-bold">Basic/Dept</SheetTitle>
+              <SheetTitle className="text-white uppercase text-2xl font-bold">Basic/Dept</SheetTitle>
             </SheetHeader>
             <div className="pt-[6rem] pl-6">
-              <ul className="space-y-6">
+              <ul className="flex flex-col gap-6">
                 {
                   navItems.map((item, index) => (
+                    <Link key={index} href={item.href}>
                     <li className="uppercase font-semibold text-xl">{item.name}</li>
+                    </Link>
                   ))
                 }
               </ul>

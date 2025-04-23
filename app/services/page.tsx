@@ -9,8 +9,8 @@ const page = () => {
     <div className="grain flex flex-col justify-between lg:py-10 md:py-[2rem] py-[4rem] lg:px-[6rem] px-6 bg-[#f1f1f1]">
       <Navbar />
       <div className="md:mt-[10rem] mt-[4rem] md:pb-[6rem]">
-        <h1 className="lg:text-[6rem] md:text-5xl text-neutral-900 text-4xl uppercase font-extrabold md:w-[55%] leading-none">
-          Easy to understand. ● Impossible to ignore.
+        <h1 className="lg:text-[6rem] md:text-5xl text-neutral-900 text-4xl uppercase font-bold md:font-extrabold md:w-[55%] leading-none">
+          Easy to understand.<br/>● Impossible to ignore.
         </h1>
         <Tabs defaultValue="account" className="w-full lg:pt-[10rem] pt-[4rem]">
           <TabsList className="bg-none flex lg:flex-row flex-col justify-between lg:items-center md:items-start lg:gap-0 gap-[6rem] w-full">
@@ -18,7 +18,7 @@ const page = () => {
               <TabsTrigger value="account">Services</TabsTrigger>
               <TabsTrigger value="password">Industry</TabsTrigger>
             </div>
-            <div className="lg:w-[30%] md:w-[60%] w-[80%] text-black font-medium lg:order-1 order-[-1]">
+            <div className="lg:w-[30%] md:w-[60%] w-[80%] text-black md:text-sm text-[14px] font-medium lg:order-1 order-[-1]">
               <p>
                 The work we create lives at the intersection of clarity and
                 surprise and positions brands in culture through shared values
@@ -26,7 +26,7 @@ const page = () => {
               </p>
             </div>
           </TabsList>
-          <div className="lg:mt-6 mt-[12rem] relative pt-6 border-t-[1px] border-t-zinc-800">
+          <div className="lg:mt-6 mt-[10rem] relative pt-6 border-t-[1px] border-t-zinc-800">
             <TabsContent value="account" className="w-full">
               <div className="flex flex-col w-full justify-between lg:gap-6 gap-6">
                 {serviceItems.map((item, index) => (
@@ -42,13 +42,13 @@ const page = () => {
                       <div className="flex justify-between pr-4 font-medium">
                         <p className="">0{index + 1}</p> <p>/04</p>
                       </div>
-                      <div className="flex flex-col justify-center flex-1 gap-6 lg:pt-0 pt-[4rem]">
+                      <div className="flex flex-col justify-center flex-1 gap-6 lg:pt-0 md:pt-[4rem] pt-8">
                         {" "}
                         {/* Centered group */}
                         <h1 className="lg:text-4xl text-2xl font-extrabold uppercase w-[70%] leading-none">
                           {item.title}
                         </h1>
-                        <p className="w-[80%] font-medium">
+                        <p className="w-[80%] font-medium md:text-sm text-xs">
                           {item.description}
                         </p>
                         <div className="rounded-full border-[1px] font-semibold border-neutral-800 px-8 py-2 w-fit uppercase text-xs">
@@ -56,7 +56,7 @@ const page = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="md:flex hidden gap-6 lg:pl-4 lg:pt-0 pt-[4rem]">
+                    <div className="md:flex hidden gap-6 lg:pl-4 lg:pt-0 md:pt-[4rem] pt-8">
                       {item.items.map((item, index) => (
                         <div
                           key={index}
@@ -73,7 +73,7 @@ const page = () => {
                             <h1 className="text-lg font-extrabold group-hover:underline">
                               {item.brand}
                             </h1>
-                            <p className="lg:text-sm text-xs font-medium text-neutral-900">
+                            <p className="lg:text-sm xs font-medium text-neutral-900">
                               {item.description}
                             </p>
                           </div>
@@ -127,11 +127,11 @@ const page = () => {
                         <p>/04</p>
                       </div>
 
-                      <div className="flex flex-col justify-center flex-1 gap-6 lg:pt-0 pt-[4rem]">
+                      <div className="flex flex-col justify-center flex-1 gap-6 lg:pt-0 md:pt-[4rem] pt-8">
                         <h1 className="lg:text-4xl text-2xl font-extrabold uppercase w-[70%] leading-none">
                           {item.title}
                         </h1>
-                        <p className="w-[80%] font-medium">
+                        <p className="w-[80%] font-medium md:text-sm text-xs">
                           {/* {item.description} */}
                         </p>
                         <div className="rounded-full border-[1px] font-semibold border-neutral-800 px-8 py-2 w-fit uppercase text-xs">
@@ -141,7 +141,7 @@ const page = () => {
                     </div>
 
                     {/* Right side for desktop */}
-                    <div className="md:flex hidden w-full gap-6 lg:pl-4 lg:pt-0 pt-[4rem]">
+                    <div className="md:flex hidden w-full gap-6 lg:pl-4 lg:pt-0 md:pt-[4rem] pt-8">
                       {item.items.map((item, index) => (
                         <div
                           key={index}

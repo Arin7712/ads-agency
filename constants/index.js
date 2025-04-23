@@ -205,7 +205,7 @@ export const snapShotItems = [
     {
         title: 'Growth',
         description: "As Adweek’s 18th fastest growing agency, we’ve strengthened our company with new leadership, talent, and clients the past two years. We’re hiring btw.",
-        num: '168%'
+        num: '90%'
     },
     {
         title: 'Services',

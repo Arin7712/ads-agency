@@ -41,25 +41,7 @@ export default function Home() {
     };
   }, []);
 
-  const scrollRef = useRef(null);
 
-  useEffect(() => {
-    let scroll: any;
-    if (typeof window !== "undefined") {
-      // Dynamically import LocomotiveScroll to ensure it only runs in the browser
-      const LocomotiveScroll = require("locomotive-scroll").default;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        multiplier: 0.3, // Adjust scroll pace
-      });
-    }
-
-    return () => {
-      if (scroll) scroll.destroy();
-    };
-  }, []);
 
   const getBackgroundClass = () => {
     if (isAgencyVisible) {
@@ -72,17 +54,17 @@ export default function Home() {
   };
 
   return (
-    <div data-scroll-container ref={scrollRef} className="relative" data-scroll-section>
+    <div className="relative">
       <div className={`grain transition-colors duration-500 ${getBackgroundClass()}`}>
         <Hero2 isAboutVisible={isAboutVisible} />
         <Awards />
         <Work />        
+        <Featured isAboutVisible={isAboutVisible} />
         {/* About Section */}
         <div ref={aboutRef}>
           <About isAboutVisible={isAboutVisible} />
         </div>
         {/* Featured Section */}
-        <Featured isAboutVisible={isAboutVisible} />
         {/* Agency Snapshot Section */}
         <div className="flex flex-col justify-between md:py-6 py-[4rem] lg:px-[6rem] px-6">
           <AgencySnapShot />

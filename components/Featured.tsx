@@ -37,8 +37,11 @@ const Featured = ({isAboutVisible} : {isAboutVisible: Boolean}) => {
       <div className="overflow-x-scroll no-scrollbar w-full" ref={scrollRef}>
         <div className="flex gap-16 w-max">
           {featuredItems.map((item, index) => (
-            <div key={index} className="flex flex-col justify-between md:w-96 w-64 lg:h-80 md:h-64 h-60">
-              <Image src={item.img} alt="logo" width={100} height={100} />
+            <div key={index} className="flex flex-col justify-between md:w-96 w-64 lg:h-80 md:h-64 h-60 overflow-y-hidden">
+              <div className="space-y-3">
+              <Image src={item.img} alt="logo" width={100} height={100}/>
+              <div className="border-t-[1px] w-[15%] border-black h-1"></div>
+              </div>
               <div className="flex flex-col gap-2">
                 <h2 className="text-xl font-bold whitespace-nowrap overflow-hidden text-ellipsis uppercase">
                   {item.name}

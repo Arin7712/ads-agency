@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="pt-4">
               <ul className="">
                 {socials.map((item, index) => (
-                  <li className="hover:underline hover:cursor-pointer">
+                  <li key={index} className="hover:underline hover:cursor-pointer">
                     {" "}
                     {item.name}
                   </li>
@@ -58,7 +58,7 @@ const Footer = () => {
             <div className="pt-4">
               <ul className="">
                 {socials.map((item, index) => (
-                  <li className="hover:underline hover:cursor-pointer">
+                  <li key={index} className="hover:underline hover:cursor-pointer">
                     {" "}
                     {item.name}
                   </li>
